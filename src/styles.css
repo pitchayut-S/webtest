@@ -1,3 +1,115 @@
-/* You can add global styles to this file, and also import other style files */
-
 @import 'tailwindcss';
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+:root {
+  --tele-blue: #0047ab;
+  --tele-purple: #5d3fd3;
+}
+
+/* Sidebar Styling */
+.sidebar-link {
+  color: #333;
+  text-decoration: none;
+  padding: 8px 15px;
+  display: block;
+  font-size: 14px;
+}
+.sidebar-link.active {
+  background-color: #eef2ff;
+  color: var(--tele-blue);
+  border-right: 4px solid var(--tele-blue);
+  font-weight: 600;
+}
+.sub-menu {
+  padding-left: 30px;
+  color: var(--tele-blue);
+  font-size: 13px;
+}
+
+/* Stepper: ปรับความยาวให้สมดุลไม่ยาวสุดขอบ */
+.stepper-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  max-width: 500px; /* คุมความยาวไม่ให้ยาวเกินไป */
+}
+.step-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #ccc;
+  z-index: 2;
+}
+.step-dot.active {
+  border: 3px solid var(--tele-blue);
+  background: white;
+}
+.step-line {
+  height: 2px;
+  background: #ccc;
+  flex: 1;
+  margin: 0 -2px;
+}
+
+/* Card Styling */
+.training-card {
+  border: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+/* ปุ่มสร้างนัดหมายอบรมแบบพรีเมียม */
+.btn-create-appointment {
+  background-color: #06391d !important; /* สีเขียวเข้มจัดตามรูป */
+  color: white !important;
+  border-radius: 50px !important; /* ทำให้โค้งมนเป็นรูปแคปซูล */
+  padding: 8px 20px !important;
+  border: none !important;
+  font-weight: 600 !important;
+  font-size: 14px !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+.btn-create-appointment:hover {
+  background-color: #0a4d27 !important;
+  transform: scale(1.02);
+}
+
+/* กรอบสีขาวรอบไอคอนปฏิทิน */
+.calendar-icon-wrapper {
+  background-color: white;
+  color: #06391d;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px; /* ขอบไอคอนมนเล็กน้อย */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+/* จุดวงกลมใน Stepper */
+.step-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #ccc;
+  z-index: 2;
+}
+.step-dot.active {
+  border: 3px solid #0047ab;
+  background-color: white;
+}
+
+/* เส้นเชื่อม */
+.step-line {
+  height: 2px;
+  background-color: #ccc;
+  margin: 0 -1px;
+}
+
+/* ปุ่ม Join และไอคอนอื่นๆ */
+.btn-info { border: none !important; }
+.training-card .badge { font-size: 9px; font-weight: normal; }
